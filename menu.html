@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+        <title>Cloak</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <div>
+            <h1>Cloak</h1>
+            <h2>This Site's Permissions:</h2>
+        </div>
+
+
+        <table>
+            <!-- Line 1, Cookies -->
+
+            <tr>
+                <td>
+                    <img src="/cookie.png">
+                </td>
+                <td>
+                    <p><b>Cookies</b></p>
+                    <p>This site can collect and store information on this device.</p>
+                </td>
+                <td>
+                    <label class="toggle">
+                        <input type="checkbox" id="cookieSetting">
+                        <span class="slider"></span>
+                    </label><br><br>
+                </td>
+            </tr>
+
+            <!--- Line 2, Javascript -->
+
+            <tr>
+                <td>
+                    <img src="/scripts.png">
+                </td>
+                <td>
+                    <p><b>JavaScript</b></p>
+                    <p>This site can run interactive programs and process data.</p>
+                </td>
+                <td>
+                    <label class="toggle">
+                        <input type="checkbox">
+                        <span class="slider"></span>
+                    </label><br><br>
+                </td>
+            </tr>
+
+            <!--- Line 3, Pop-ups -->
+
+            <tr>
+                <td>
+                    <img src="/popup.png">
+                </td>
+                <td>
+                    <p><b>Pop-ups</b></p>
+                    <p>This site can open additional windows, including forms and ads.</p>
+                </td>
+                <td>
+                    <label class="toggle">
+                        <input type="checkbox">
+                        <span class="slider"></span>
+                    </label><br><br>
+                </td>
+            </tr>
+        </table>
+        <script src="menu.js"></script>
+    </body>
+</html>

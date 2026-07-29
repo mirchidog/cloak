@@ -1,13 +1,19 @@
-/* Description Blocks */
-.description {
-    float: left;
-    width: 340px;
+body {
+    width: 400px;
+    background-color: #0d1f22;
 }
-.form {
-    float: right;
-    width: 60px;
+img {
+    scale: 20%;
+    padding: none;
 }
-
+h1, h2, p {
+    color: #f2f5f7;
+    font-family:'Segoe UI', 'Tahoma', 'Geneva', 'Verdana', 'sans-serif';
+}
+table {
+    padding-left: 12px;
+    padding-right: 12px;
+}
 
 /* Toggle Switch */
 .toggle {
@@ -28,7 +34,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: #ccc;
+    background-color: #931f1d;
     -webkit-transition: .4s;
     transition: .4s;
 }
@@ -39,15 +45,15 @@
     width: 12px;
     left: 4px;
     bottom: 4px;
-    background-color: white;
+    background-color: #f2f5f7;
     -webkit-transition: .4s;
     transition: .4s;
 }
 input:checked + .slider {
-    background-color: #2196F3
+    background-color: #2c6e49
 }
 input:focus + .slider {
-    box-shadow: 0 0 1px #2196f3
+    box-shadow: 0 0 1px #2c6e49
 }
 input:checked + .slider:before {
     -webkit-transform: translateX(26px);

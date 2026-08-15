@@ -8,6 +8,9 @@ let settingList = [
     "location",
     "notifications"
 ]
+console.log(settingList)
+
+
 // Automatically toggle each setting.
 function toggleAll(settingList) {
     document.getElementById(settingList).checked = true;
@@ -25,6 +28,7 @@ document.addEventListener("DOMContentLoaded", function() {
             chrome.contentSettings[settingList].get(
             {primaryUrl: url}, function (details) {
                 let setting = details.setting;
+                // Set toggles to current site settings
                 document.getElementById(settingList).checked = (setting === "allow" || setting === "session_only"),
                 console.log({ url, setting, details });
             },
@@ -33,44 +37,42 @@ document.addEventListener("DOMContentLoaded", function() {
     })
 })
 
-function querySettings(settingList) {
-    chrome.contentSettings[settingList].get(
-            {primaryUrl: url}, function (details) {
-                let setting = details.setting;
-                document.getElementById(settingList).checked = (setting === "allow" || setting === "session_only"),
-                console.log({ url, setting, details });
-            },
-        );
-}
 
-
-
-
-document.getElementById("javascript").onchange = function() {
-    if (document.getElementById("javascript").checked == false) {
+// Listen for a changing setting value
+settingList.forEach((setting) => document.getElementById(setting).onchange = function() {
+    // Block given setting if display changes to false
+    if (document.getElementById(setting).checked == false) {
         chrome.tabs.query({ active: true, currentWindow: true}, function (tabs) {
             activeTab = tabs[0];
             let url = new URL(activeTab.url);
             let urlOrigin = (url.origin + "/*")
             console.log(urlOrigin)
-            chrome.contentSettings.javascript.set({
+            chrome.contentSettings[setting].set({
                 primaryPattern: urlOrigin,
                 setting: "block"
             });
             chrome.tabs.reload();
         });
     };
-    if (document.getElementById("javascript").checked == true) {
+    // Allow given setting if display changes to true
+    if (document.getElementById(setting).checked == true) {
         chrome.tabs.query({ active: true, currentWindow: true}, function (tabs) {
             activeTab = tabs[0];
             let url = new URL(activeTab.url);
             let urlOrigin = (url.origin + "/*")
             console.log(urlOrigin)
-            chrome.contentSettings.javascript.set({
+            chrome.contentSettings[setting].set({
                 primaryPattern: urlOrigin,
                 setting: "allow"
             });
             chrome.tabs.reload();
         });
     };
-}
+});
+
+// Display the tab's URL at the top of the extension window
+chrome.tabs.query({ active: true, currentWindow: true}, function (tabs) {
+    activeTab = tabs[0];
+    let url = new URL(activeTab.url);
+    document.getElementById("siteURL").innerHTML = url.origin
+});

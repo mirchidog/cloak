@@ -5,26 +5,25 @@
         <link rel="stylesheet" type="text/css" href="style.css">
     </head>
     <body>
-        <div>
-            <h1>Cloak</h1>
-            <h2>This Site's Permissions:</h2>
-        </div>
-
-
         <table>
-            <!-- Line 1, Cookies -->
-
             <tr>
-                <td style="width: 24px">
+                <td colspan="3">
+                    <p id="center">Permissions for the site</p>
+                    <h2 id="siteURL"></h2>
+                </td>
+            </tr>
+            <!-- Line 1, Cookies -->
+            <tr>
+                <td>
                     <img src="images/cookie.png">
                 </td>
                 <td>
                     <p><b>Cookies</b></p>
-                    <p>This site can collect and store information on this device.</p>
+                    <p>Allow this site to collect and store data on this device.</p>
                 </td>
                 <td>
                     <label class="toggle">
-                        <input type="checkbox" id="cookies">
+                        <input type="checkbox" id="cookies" class="setting">
                         <span class="slider"></span>
                     </label><br><br>
                 </td>
@@ -38,11 +37,11 @@
                 </td>
                 <td>
                     <p><b>JavaScript</b></p>
-                    <p>This site can run interactive programs and process data.</p>
+                    <p>Allow this site to run interactive programs and process data.</p>
                 </td>
                 <td>
                     <label class="toggle">
-                        <input type="checkbox" id="javascript">
+                        <input type="checkbox" id="javascript" class="setting">
                         <span class="slider"></span>
                     </label><br><br>
                 </td>
@@ -56,11 +55,11 @@
                 </td>
                 <td>
                     <p><b>Pop-ups</b></p>
-                    <p>This site can open additional windows, including forms and ads.</p>
+                    <p>Allow this site to open additional windows, including forms and ads.</p>
                 </td>
                 <td>
                     <label class="toggle">
-                        <input type="checkbox" id="popups">
+                        <input type="checkbox" id="popups" class="setting">
                         <span class="slider"></span>
                     </label><br><br>
                 </td>
@@ -74,11 +73,11 @@
                 </td>
                 <td>
                     <p><b>Camera</b></p>
-                    <p>This site can open additional windows, including forms and ads.</p>
+                    <p>Allow this site to access your webcam and any other connected camera.</p>
                 </td>
                 <td>
                     <label class="toggle">
-                        <input type="checkbox" id="camera">
+                        <input type="checkbox" id="camera" class="setting">
                         <span class="slider"></span>
                     </label><br><br>
                 </td>
@@ -92,11 +91,11 @@
                 </td>
                 <td>
                     <p><b>Microphone</b></p>
-                    <p>This site can open additional windows, including forms and ads.</p>
+                    <p>Allow this site to use recorded audio.</p>
                 </td>
                 <td>
                     <label class="toggle">
-                        <input type="checkbox" id="microphone">
+                        <input type="checkbox" id="microphone" class="setting">
                         <span class="slider"></span>
                     </label><br><br>
                 </td>
@@ -110,11 +109,11 @@
                 </td>
                 <td>
                     <p><b>Clipboard</b></p>
-                    <p>This site can open additional windows, including forms and ads.</p>
+                    <p>Allow this site to access copied data.</p>
                 </td>
                 <td>
                     <label class="toggle">
-                        <input type="checkbox" id="clipboard">
+                        <input type="checkbox" id="clipboard" class="setting">
                         <span class="slider"></span>
                     </label><br><br>
                 </td>
@@ -128,11 +127,11 @@
                 </td>
                 <td>
                     <p><b>Location Services</b></p>
-                    <p>This site can open additional windows, including forms and ads.</p>
+                    <p>Allow this site to view your precise GPS coordinates.</p>
                 </td>
                 <td>
                     <label class="toggle">
-                        <input type="checkbox" id="location">
+                        <input type="checkbox" id="location" class="setting">
                         <span class="slider"></span>
                     </label><br><br>
                 </td>
@@ -146,11 +145,11 @@
                 </td>
                 <td>
                     <p><b>Notifications</b></p>
-                    <p>This site can open additional windows, including forms and ads.</p>
+                    <p>Allow this site to show ads, notifications, and alerts in your browser.</p>
                 </td>
                 <td>
                     <label class="toggle">
-                        <input type="checkbox" id="notifications">
+                        <input type="checkbox" id="notifications" class="setting">
                         <span class="slider"></span>
                     </label><br><br>
                 </td>

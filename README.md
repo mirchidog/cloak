@@ -1,5 +1,6 @@
 <h1>Cloak</h1>
-<img src="https://pub-a221663dab4d4e76b92c864f6824b964.r2.dev/devlogs/a22ee4d3-767d-4111-b8ed-5bbad6d3047a/571d9a66-4885-4e1e-b812-7aa2cd8b66d7.png">
+View and edit site-specific permissions all from one menu.
+<br><br><img src="https://pub-a221663dab4d4e76b92c864f6824b964.r2.dev/devlogs/a22ee4d3-767d-4111-b8ed-5bbad6d3047a/571d9a66-4885-4e1e-b812-7aa2cd8b66d7.png">
 <h2>Overview</h2>
 Brave browser has a popup for listing site specific settings and statistics from one click, and now back on Chrome, the permissions menu (and especially the one for
 specific websites) is hidden away within the chrome://settings directory.
